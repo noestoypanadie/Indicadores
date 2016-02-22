@@ -1,0 +1,17 @@
+   CurrencyPairs          = "";
+   TimeFrames             = "M1, M5, M15, M30, H1, H4, D1, W1, MN";
+   NumCandles             = 10;
+   HistoricalShift        = 0;
+   CandleWidth            = 5;
+   SpacingBetweenCandles  = 2;
+   CandleUpColor          = Lime;
+   CandleDownColor        = Red;
+   TextColor              = White;
+   TextFont               = "Verdana";
+   TextSize               = 9;
+   BackgroundColor        = Black;
+   DisplayInfo            = true;
+   DisplayCcyName         = true;
+   DisplayTF              = true;
+   RefreshEveryXMins      = 0;
+   HeikinAshiCandles      = false;

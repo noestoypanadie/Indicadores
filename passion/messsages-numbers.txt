@@ -1,0 +1,97 @@
+include <WinUser32.mqh>
+
+void hectorSetupChart(){
+   int hwnd = WindowHandle(Symbol(),Period());
+   PostMessageA(hwnd, WM_COMMAND , 34300, 0);
+}
+
+
+33017 - Remove autoscrolling
+33018 - Switch to represent "bars"
+33019 - Switch to view "candles"
+33021 - Net Ctrl + G
+33022 - Switch to represent the "line"
+33023 - shift schedule
+33024 - volumes Ctrl + L
+33025 - zoom
+33026 - zoom
+33054 - Save As Picture
+33134 - timeframe D1
+33136 - timeframe H4
+33137 - M1 timeframe
+33138 - timeframe M5
+33139 - timeframe M15
+33140 - timeframe M30
+33141 - W1 timeframe
+33157 - Properties F8
+33220 - drawing template, save the template
+33230 - Insert-down arrow
+33231 - Paste-Up Arrow
+33232 - icon-tick
+33233 - crosshair
+33234 - the cursor
+33235 - Insert line-cyclical
+33236 - equidistant channel
+33237 - Fibonacci lines
+33238 - Insert-Fibonacci arc
+33239 - Insert-Fibonacci fan
+33240 - inserting channels, Fibonacci
+33241 - Insert-Gunn of Gunn-Net
+33242 - Insert-Gann Line Gann
+33243 - Insert-Gunn, Gann fan
+33244 - horizontal line
+33246 - Insert Andrews pitchfork
+33247 - insert-rectangle-shape
+33248 - Insert feeds-linear regression
+33251 - Insert-icons-stop
+33253 - Text
+33254 - Insert-icons-bad
+33255 - Insert-icons-well
+33256 - Insert-Fibonacci time zones
+33257 - trendline
+33258 - Insert line-trend line on the corner
+33259 - insert-figures-triangle
+33260 - vertical line
+33261 - text label
+33315 - kind of tester strategies?
+33334 - timeframe MN
+34300-34699 (?) - Custom Indicators in alphabetical order
+34700 - indicators-moving average of oscillator
+34701 - indicators-accelerator oscillator
+34702 - indicators-accumulation / distribution
+34703 - indicators-alligator
+34704 - indicators-average directional movement index
+34705 - indicators-average true range
+34706 - indicators-awesome oscillator
+34707 - indicators-bears power
+34708 - indicators-bollinger bands
+34709 - indicators-bulls power
+34710 - indicators-commodity channel index
+34711 - indicators-demarker
+34712 - indicators-envelopes
+34713 - indicators-force index
+34714 - indicators-fractals
+34715 - indicators-gator oscillator
+34716 - indicators-ichimoku kinko hyo
+34717 - indicators-macd
+34718 - indicators-market facilitation index
+34719 - indicators-momentum
+34720 - indicators-money flow index
+34721 - indicators-moving averages
+34722 - lights-on balance volume
+34723 --parabolic sar indicator
+34724 - indicators-relative strength index
+34725 - indicators-relative vigor index
+34726 --standard deviation indicators
+34727 --stochastic oscillator indicators
+34728 - indicators-volumes
+34729 --william's percent range indicators
+35400 - timeframe H1
+35454 - Order buylimit
+35455 - Order buystop
+35456 - Order selllimit
+35457 - Order sellstop
+35458 - a new order F9
+35464 - the right price tag
+35511 - drawing templates, template download
+57602 - close the current chart

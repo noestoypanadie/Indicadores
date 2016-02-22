@@ -1,0 +1,52 @@
+These indicators are posted on a free-of-charge, take-them-or-leave-them, as-is, use-them-at-your-own-risk, basis. Please don't expect me to spend hours modifying them to meet individual requirements. Full source code is provided, if anybody wants to make changes.
+
+Daily Range PeterE has been updated to display ask price; bid price; spread; today's range thus far; X-day average daily range (excluding any Sunday candles).
+
+Signal displays 'traffic lights' for MA, Williams %R and Parabolic SAR (green = bullish, yellow = neutral, red = bearish); bid price (green = uptick, red = downtick); S = spread, and spread as a % of 30 day ave daily range; $ = dollar value per pip (per 1 lot trade), and #pips price is above/below today's open; R = today's range thus far; 30 day average daily range (excluding any Sunday candles); today's range as a % of average daily range; C = broker's carry interest rate for long and short trades, respectively. [Credit where credit's due: the original code was sourced from here.]
+
+Display Info All Pairs displays symbol abbreviation; current bid price; today's range thus far; 30 day average daily range (excluding any Sunday candles); today's range as a % of average daily range; spread; spread as a % of average daily range; dollar value per pip (per 1 lot trade).
+
+Clocks displays MT4 broker time, with minutes and seconds underneath; and clocks for 9 other customizable timezones. Dark gray = 'night' (time between 6pm and 6am); light gray = 'day' (6am to 6pm); bright color = market open (8am to 5pm).
+Attached Image (click to enlarge)
+
+
+
++CREO QUE ESTA ES LA EXPLICACION DEL SIGNAL:
+LEGEND (see post #26 for screenshot):
+
+S = spread in pips, and spread as a % of a 30 day ave daily range (or whatever value you supply in the ADRdays parameter). (Note: Saturdays and Sundays are not included in the ADR calculation).
+
+$ = dollars per pip, for each full lot traded. The value alongside is the number of pips that price has moved up (+) or down (-) since midnight (MT4 time)
+
+R = today's range (pips between high and low) thus far, as a fraction and % of a 30 day ave daily range (or whatever value you supply in the ADRdays parameter. (Note: Saturdays and Sundays are not included in the ADR calculation). The numbers inside the square brackets are the smallest and largest daily moves (in pips) during the ADR period.
+
+C = the swap/rollover paid/charged on long and short positions respectively, as stated by the br0ker (i.e. supposedly per full lot).
+
+T = MT4 time when the last tick occurred; time to run before the current candle ends; and how much time has elapsed, %-wise, in the forming of the current candle (100% would mean that the candle is completely formed, and the next candle begins at 0%)
+
+
+PARAMETERS:
+
+scaleX = horizontal interval at which the squares are created
+scaleY = vertical interval
+offsetX = horizontal indent of all squares
+offsetY = vertical indent
+fontSize = font size
+corner = adding a parameter for choosing a corner
+symbolCodeBuy = symbol code for a buy signal
+symbolCodeSell = symbol code for a sell signal
+symbolCodeNoSignal = symbol code for a no signal
+signalBuyColor = color of the symbol for a buy signal
+signalSellColor = color of the symbol for a sell signal
+noSignalColor = color of the symbol for no signal
+textColor = color of all writings
+
+MA1period = first period used to determine color of MA traffic light (green=bullish, yellow=neutral, red=bearish)
+MA2period = second period used to determine color of MA traffic light (green=bullish, yellow=neutral, red=bearish)
+WPRperiod = period used for determining color of Williams %R traffic light (green=bullish, yellow=neutral, red=bearish)
+
+ADRdays = number of days used in calculating average daily range for spread% and range% (Saturdays and Sundays not included in the count)
+
+RefreshEveryXMins = determines how frequently the data is refreshed: 0 = every tick; 1,5,15,30, 60,240 means at the start of every M1,M5,M15,M30,H1,H4 candle respectively
+
+UpdateTicker = if TRUE, displays a series of dots interspersed with 'up dots' and 'down dots' representing the most recent upticks and downticks, respectively. Needs Wingdings2 font to be installed, in order to work correctly.

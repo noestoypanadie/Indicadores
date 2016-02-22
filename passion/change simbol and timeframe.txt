@@ -1,0 +1,9 @@
+There is a special WinUser32.mqh file. Download and replace her.
+
+void SetChart (string smb, int tf ) {
+ int hwnd = WindowHandle (Symbol () , Period ()); // current schedule
+ PostMessageA (hwnd, WM_KEYDOWN, VK_RETURN, 0); Sleep (PAUSE); // initialize the forward navigation line
+ hwnd = GetDlgItem (hwnd, 0x45A) ; // receive prompt
+ PostMessageA (hwnd, WM_KEYDOWN, VK_ESCAPE, 0); // exit edit navigation line
+ SetWindowTextA (hwnd, smb + "" + tf);  PostMessageA (hwnd, WM_KEYDOWN, VK_RETURN, 0);
+ }
